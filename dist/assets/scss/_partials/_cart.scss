@@ -1,0 +1,183 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+.cart-table{
+    .table{
+        margin: 0;
+        white-space: nowrap;
+        thead{
+            background-color: #ff7e67;
+            tr{
+                th{
+                    border-color: #ff7e67;
+                    border-bottom: 0 solid transparent;
+                    color: #ffffff;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 15px 20px;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border-color: #ccc;
+                    text-align: center;
+                    padding: 20px;
+                    vertical-align: middle;
+                    font-weight: 600;
+                    color: #333c4a;
+                    @include device(mobile){
+                        padding: 10px;
+                    }
+                    a{
+                        color: #333c4a;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        tr{
+            .pro-thumbnail, .pro-price, .pro-quantity, .pro-subtotal, .pro-remove{
+                width: 140px;
+            }
+            .pro-qty{
+                width: 90px;
+                height: 35px;
+                border: 1px solid #ddd;
+                padding: 0 15px;
+                float: left;
+                .qtybtn{
+                    width: 15px;
+                    display: block;
+                    float: left;
+                    line-height: 38px;
+                    cursor: pointer;
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #606060;
+                }
+                input{
+                    width: 28px;
+                    float: left;
+                    border: none;
+                    height: 38px;
+                    line-height: 33px;
+                    padding: 0;
+                    text-align: center;
+                    background-color: transparent;
+                    &:focus{
+                        outline: none;
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cart-update-option{
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    padding: 15px 20px;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    @include device(desktop){
+        margin-top: 0;
+        border-top: 0 solid transparent;
+    }
+    @include device(desktop-up){
+        margin-top: 0;
+        border-top: 0 solid transparent;
+    }
+    .apply-coupon-wrapper{
+        width: 55%;
+        @include device(mobile){
+            width: 100%;
+        }
+        button{
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            border-radius: 0;
+        }
+        form{
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -ms-flex-pack: center;
+            white-space: nowrap;
+            input{
+                border: 1px solid #ccc;
+                font-size: 14px;
+                padding: 7px 10px;
+                outline: none;
+                -webkit-transition: all 0.4s ease-out;
+                -moz-transition: all 0.4s ease-out;
+                -o-transition: all 0.4s ease-out;
+                transition: all 0.4s ease-out;
+                margin-right: 15px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.cart-calculator-wrapper{
+    margin-top: 30px;
+    background-color: #f8f8f8;
+    .cart-calculate-items{
+        font-weight: 500;
+        h3{
+            color: #222222;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 27px 15px 25px;
+            margin-bottom: 0;
+        }
+        .table{
+            margin-bottom: 0;
+            tr{
+                td{
+                    color: #333c4a;
+                    padding: 15px 20px;
+                    &.total-amount{
+                        color: #ff7e67;
+                        font-weight: 700;
+                    }
+                    &:nth-child(2){
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}

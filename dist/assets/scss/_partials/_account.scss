@@ -1,0 +1,111 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+.myaccount-page-wrapper{
+    .myaccount-tab-menu{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        a{
+            border: 1px solid #ccc;
+            border-bottom: none;
+            color: #333c4a;
+            font-weight: 500;
+            font-size: 12px;
+            display: block;
+            padding: 15px 15px;
+            text-transform: uppercase;
+            i{
+                font-size: 14px;
+                text-align: center;
+                width: 25px;
+            }
+            &.active{
+                background-color: #ff7e67;
+                border-color: #ff7e67;
+                color: #ffffff;
+            }
+            &:hover{
+                background-color: #ff7e67;
+                border-color: #ff7e67;
+                color: #ffffff;
+            }
+            &:last-child{
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+    #myaccountContent{
+        @include device(mobile){
+            margin-top: 30px;
+        }
+        .myaccount-content{
+            border: 1px solid #eeeeee;
+            padding: 30px;
+            h3{
+                font-size: 22px;
+                border-bottom: 1px dashed #ccc;
+                padding-bottom: 10px;
+                margin-bottom: 25px;
+                font-weight: 400;
+            }
+            .welcome{
+                strong{
+                    font-weight: 600;
+                    color: #ff7e67;
+                }
+                a{
+                    color: #333c4a;
+                }
+            }
+            .myaccount-table{
+                white-space: nowrap;
+                font-size: 14px;
+                .table, table{
+                    th{
+                        color: #333c4a;
+                        padding: 10px;
+                        font-weight: 500;
+                        background-color: #f8f8f8;
+                        border-color: #ccc;
+                        border-bottom: 0;
+                    }
+                    td{
+                        padding: 10px;
+                        vertical-align: middle;
+                        border-color: #ccc;
+                        color: #636363;
+                    }
+                }
+            }
+            .saved-message{
+                background-color: #f4f5f7;
+                border-top: 3px solid #ff7e67;
+                -webkit-border-radius: 5px 5px 0 0;
+                -moz-border-radius: 5px 5px 0 0;
+                border-radius: 5px 5px 0 0;
+                font-weight: 600;
+                font-size: 14px;
+                color: #606060;
+                padding: 20px;
+            }
+            fieldset{
+                margin-top: 20px;
+                legend{
+                    color: #333c4a;
+                    font-size: 16px;
+                    margin-top: 20px;
+                    font-weight: 500;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}

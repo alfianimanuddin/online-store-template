@@ -1,0 +1,189 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+.checkoutaccordion{
+    .card{
+        border: none;
+        padding: 0;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        box-shadow: none;
+        h3{
+            background-color: #f7f7f7;
+            border-top: 3px solid #ff7e67;
+            color: #333c4a;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 0 30px;
+            padding: 15px 20px;
+            position: relative;
+            text-transform: uppercase;
+            span{
+                color: #ff7e67;
+                cursor: pointer;
+                -webkit-transition: all 0.4s ease-out;
+                -moz-transition: all 0.4s ease-out;
+                -o-transition: all 0.4s ease-out;
+                transition: all 0.4s ease-out;
+                margin-left: 10px;
+            }
+        }
+        .card-body{
+            border: 1px solid #ccc;
+            font-size: 14px;
+            padding: 20px;
+            margin-bottom: 30px;
+            .cart-update-option{
+                margin-top: 0;
+                border: 1px solid #ccc;
+                margin-top: 15px;
+                padding: 15px 20px;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-justify-content: space-between;
+                -moz-justify-content: space-between;
+                -ms-justify-content: space-between;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                -ms-flex-pack: space-between;
+                @include device(desktop){
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                }
+                @include device(desktop-up){
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            .login-reg-form-wrap{
+                background-color: #ffffff;
+                -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+                -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+                padding: 23px 30px 30px;
+                .login-reg-form-meta{
+                    a{
+                        color: #ff7e67;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkout-billing-details-wrap{
+    h2{
+        color: #333c4a;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .billing-form-wrap{
+        margin-top: -20px;
+    }
+}
+
+.order-summary-details{
+    @include device(mobile){
+        margin-top: 3rem;
+    }
+    h2{
+        color: #333c4a;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .billing-form-wrap{
+        margin-top: -20px;
+    }
+    .order-summary-content{
+        .order-summary-table{
+            background-color: #f7f7f7;
+            margin-top: 34px;
+            table, .table{
+                color: #333c4a;
+                margin-bottom: 0;
+                font-size: 15px;
+                white-space: nowrap;
+                tr{
+                    th, td{
+                        font-weight: 500;
+                        vertical-align: middle;
+                        padding: 15px 10px;
+                        border-width: 1px;
+                        a{
+                            color: #333c4a;
+                            font-weight: 400;
+                            strong{
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .order-payment-method{
+            background-color: #f7f7f7;
+            padding: 40px 20px 30px;
+            .single-payment-method{
+                margin-bottom: 20px;
+                .paypal-card{
+                    max-width: 150px;
+                    height: 50px;
+                    margin-top: 10px;
+                    display: block;
+                }
+                .payment-method-details{
+                    background-color: #f1f1f1;
+                    color: #333c4a;
+                    font-weight: 400;
+                    font-size: 13px;
+                    padding: 10px;
+                    position: relative;
+                    margin-top: 20px;
+                    display: none;
+                    *{
+                        margin: 0;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid #f1f1f1;
+                        bottom: 100%;
+                    }
+                }
+                &:first-child{
+                    .payment-method-details{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shipping-type{
+    li{
+        &:first-child{
+            margin-bottom: 1rem;
+        }
+    }
+}

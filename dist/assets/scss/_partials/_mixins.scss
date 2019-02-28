@@ -1,0 +1,104 @@
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin button-variant($color, $background, $border) {
+  	color: $color;
+  	background-color: $background;
+  	border-color: $border;
+
+  	&:focus,
+  	&.focus {
+    	color: $color;
+    	background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  	}
+  	&:hover {
+    	color: $color;
+    	background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  	}
+  	&:active,
+  	&.active,
+  	.open > &.dropdown-toggle {
+    	color: $color;
+    	background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    	&:hover,
+    	&:focus,
+    	&.focus {
+      		color: $color;
+      		background-color: darken($background, 17%);
+          	border-color: darken($border, 25%);
+    	}
+  	}
+  	&:active,
+  	&.active,
+  	.open > &.dropdown-toggle {
+    	background-image: none;
+  	}
+  	&.disabled,
+  	&[disabled],
+  	fieldset[disabled] & {
+    	&:hover,
+    	&:focus,
+    	&.focus {
+      		background-color: $background;
+          	border-color: $border;
+    	}
+  	}
+
+  	.badge {
+    	color: $background;
+    	background-color: $color;
+  	}
+}
+
+@mixin avatar($size){
+  width: $size;
+  height: $size;
+  margin-right: 10px;
+  overflow: hidden;
+  padding: 0;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@mixin device($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: 768px - 1) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: 768px) and (max-width: 992px - 1) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: 992px) and (max-width: 1200px - 1) { @content; }
+    }
+    @else if $media == desktop-up {
+        @media only screen and (min-width: 1200px) { @content; }
+    }
+    @else if $media == hd {
+        @media only screen and (min-width: 1280px + 1) { @content; }
+    }
+    @else if $media == hdd {
+        @media only screen and (min-width: 1300px + 1) { @content; }
+    }
+
+    @else if $media == hdd-up {
+        @media only screen and (min-width: 1400px) { @content; }
+    }
+}

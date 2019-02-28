@@ -1,0 +1,72 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+.contact-us-area{
+    .contact-single-info{
+        margin-bottom: 30px!important;
+        .contact-icon{
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            background-color: #333c4a;
+            border-radius: 50%;
+            display: inline-block;
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+            &:hover{
+                background-color: #ff7e67;
+            }
+            i{
+                color: #ffffff;
+                font-size: 30px;
+                line-height: 80px;
+            }
+        }
+        h3{
+            color: #333c4a;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin-top: 25px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+    .contact-message{
+        padding-top: 60px!important;
+        input, textarea{
+            width: 100%;
+            padding: 12px 10px;
+            border: 1px solid #e5e5e5;
+            background-color: #f5f5f5;
+            margin-bottom: 30px;
+            -webkit-transition: all 0.4s ease-out;
+            -moz-transition: all 0.4s ease-out;
+            -o-transition: all 0.4s ease-out;
+            transition: all 0.4s ease-out;
+            &.active{
+                outline: none;
+                border: 1px solid $primary-color;
+                background-color: #fff;
+            }
+            &:focus{
+                outline: none;
+                border: 1px solid $primary-color;
+                background-color: #fff;
+            }
+        }
+        textarea{
+            height: 150px;
+        }
+    }
+}

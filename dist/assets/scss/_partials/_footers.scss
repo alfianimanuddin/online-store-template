@@ -1,0 +1,343 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+footer{
+    padding: 0;
+    @include device(mobile){
+        padding: 0 0 50px;
+    }
+    .newsletter-area{
+        background-color: #f5f5f5;
+        padding-bottom: 64px;
+        padding-top: 64px;
+        .newsletter-inner{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            @include device(mobile){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .newsletter-title{
+                padding-right: 40px;
+                @include device(mobile){
+                    padding-right: 0;
+                }
+                h3{
+                    color: #333c4a;
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 26px;
+                    text-transform: uppercase;
+                }
+            }
+            .newsletter-box{
+                @include device(mobile){
+                    width: 100%;
+                    margin-top: 1rem;
+                }
+                form{
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    input{
+                        max-width: 225px;
+                        -webkit-box-flex: 1;
+                        -ms-flex: 1 0 225px;
+                        flex: 1 0 225px;
+                        padding: 10px;
+                        background-color: #ffffff;
+                        border: none;
+                        @include device(mobile){
+                            max-width: 100%;
+                            -webkit-box-flex: 1;
+                            -ms-flex: 1 0 auto;
+                            flex: 1 0 auto;
+                        }
+                        @include device(tablet){
+                            max-width: 100%;
+                            -webkit-box-flex: 1;
+                            -ms-flex: 1 0 auto;
+                            flex: 1 0 auto;
+                        }
+                        @include device(desktop){
+                            max-width: 100%;
+                            -webkit-box-flex: 1;
+                            -ms-flex: 1 0 auto;
+                            flex: 1 0 auto;
+                        }
+                    }
+                    .newsletter-btn{
+                        max-width: 50px;
+                        -webkit-box-flex: 1;
+                        -ms-flex: 1 0 50px;
+                        flex: 1 0 50px;
+                        height: 50px;
+                        text-align: center;
+                        cursor: pointer;
+                        z-index: 11;
+                        background-color: #333c4a;
+                        border: none;
+                        color: #fff;
+                        font-size: 22px;
+                        &:hover{
+                            background-color: #ff7e67;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+        .social-share-area{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-justify-content: flex-end;
+            -moz-justify-content: flex-end;
+            -ms-justify-content: flex-end;
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+            -ms-flex-pack: flex-end;
+            @include device(mobile){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 3rem;
+            }
+            h3{
+                color: #333c4a;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 26px;
+                text-transform: uppercase;
+                padding-right: 30px;
+                @include device(mobile){
+                    padding-right: 0;
+                }
+            }
+            .social-icon{
+                @include device(mobile){
+                    margin-top: 1rem;
+                }
+                a{
+                    color: #333c4a;
+                    height: 50px;
+                    width: 50px;
+                    line-height: 53px;
+                    text-align: center;
+                    font-size: 20px;
+                    margin-left: 8px;
+                    display: inline-block;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                    &:hover{
+                        color: #ffffff;
+                        background-color: #ff7e67;
+                    }
+                }
+            }
+        }
+    }
+    .widget-area{
+        padding-bottom: 56px!important;
+        padding-top: 62px!important;
+        @include device(mobile){
+            padding: 1rem;
+        }
+        .footer-widget{
+            padding-right: 50px;
+            @include device(mobile){
+                padding-right: 0;
+            }
+            @include device(desktop){
+                padding-right: 0;
+            }
+            @include device(desktop-up){
+                padding-right: 0;
+            }
+            &.profile-company{
+                @include device(mobile){
+                    text-align: center;
+                }
+            }
+            .footer-widget-title{
+                padding-bottom: 30px;
+                @include device(mobile){
+                    margin-top: 1.5rem!important;
+                }
+                h3{
+                    color: #333c4a;
+                    display: inline;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                    position: relative;
+                    &::before{
+                        bottom: -10px;
+                        left: 0;
+                        width: 80px;
+                        height: 3px;
+                        content: "";
+                        position: absolute;
+                        background-color: #ff7e67;
+                    }
+                }
+                .footer-logo{
+                    img{
+                        width: 170px;
+                    }
+                }
+            }
+            .footer-widget-body{
+                p{
+                    color: #707070;
+                    font-size: 15px;
+                }
+                ul{
+                    &.useful-link{
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            list-style: none;
+                            a{
+                                color: #707070;
+                                font-size: 15px;
+                                font-weight: 400;
+                                display: block;
+                                padding: 10px 0;
+                                text-transform: capitalize;
+                                &:first-child{
+                                    padding-top: 0;
+                                }
+                                &:hover{
+                                    color: #ff7e67;
+                                    padding-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                    &.address-box{
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            list-style: none;
+                            margin-bottom: 20px;
+                            span{
+                                color: #333c4a;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 20px;
+                                display: block;
+                                padding-bottom: 5px;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom-area{
+        border-top: 1px solid #e5e5e5;
+        padding-bottom: 18px!important;
+        padding-top: 18px!important;
+        .copyright-text{
+            color: #333c4a;
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            a{
+                color: #ff7e67;
+            }
+            @include device(mobile){
+                margin-bottom: 1rem;
+            }
+        }
+        .footer-payment{
+            text-align: right;
+        }
+        .order-1{
+            -ms-flex-order: 1;
+            order: 1;
+        }
+        .order-2{
+            -ms-flex-order: 2;
+            order: 2;
+        }
+        .order-md-1{
+            @include device(mobile){
+                -ms-flex-order: 1;
+                order: 1;
+            }
+        }
+        .order-md-2{
+            @include device(mobile){
+                -ms-flex-order: 2;
+                order: 2;
+            }
+        }
+    }
+}
+
+
+.footer-mobile{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: $primary-color;
+    z-index: 99999;
+    padding: .25rem 0;
+	.menu-footer{
+		padding: .8rem 0 .75rem;
+		color: $white;
+		i{
+			font-size: 1.25rem;
+		}
+	}
+	@include device(mobile){
+		display: block;
+	}
+	@include device(tablet){
+		display: block;
+	}
+	@include device(desktop){
+		display: none;
+	}
+	@include device(desktop-up){
+		display: none;
+	}
+	@include device(hd){
+		display: none;
+	}
+	@include device(hdd){
+		display: none;
+	}
+}

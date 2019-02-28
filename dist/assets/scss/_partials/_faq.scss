@@ -1,0 +1,111 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+.faq-main-wrapper{
+    .faq-inner{
+        &.padding{
+            @include device(mobile){
+                margin-top: 56px!important;
+            }
+        }
+        .faq-title{
+            h2{
+                color: #333c4a;
+                font-size: 28px;
+                line-height: 1.2;
+                font-weight: 800;
+                padding-bottom: 30px;
+                text-transform: uppercase;
+                @include device(mobile){
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .accordion{
+        .card{
+            border: none;
+            margin-bottom: 30px;
+            box-shadow: none;
+            &:first-of-type{
+                border-bottom: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &:not(:first-of-type) {
+                &:not(:last-of-type) {
+                    border-bottom: 0;
+                    border-radius: 0;
+                }
+            }
+            &:last-of-type{
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .card-header{
+                padding: 0;
+                border: none;
+                &:first-child{
+                    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+                }
+                button{
+                    color: #333c4a;
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 100%;
+                    line-height: 1.2;
+                    padding: 16px 30px;
+                    text-align: left;
+                    text-transform: capitalize;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    background-color: #f5f5f5;
+                    position: relative;
+                    border: none;
+                    cursor: pointer;
+                    i{
+                        color: #ff7e67;
+                        font-size: 20px;
+                        padding-right: 10px;
+                    }
+                    &::before{
+                        font-family: "Font Awesome\ 5 Free";
+                        top: 50%;
+                        right: 20px;
+                        content: "\f107";
+                        position: absolute;
+                        -webkit-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }
+                }
+                .accordion-heading[aria-expanded="true"] {
+                    color: #ffffff;
+                    background-color: #ff7e67;
+                    i{
+                        color: #ffffff;
+                    }
+                    &::before{
+                        font-family: "Font Awesome\ 5 Free";
+                        content: "\f106";
+                    }
+                }
+            }
+            .card-body{
+                border: 1px solid #e5e5e5;
+            }
+        }
+    }
+}
